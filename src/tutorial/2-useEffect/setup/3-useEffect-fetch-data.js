@@ -21,14 +21,17 @@ setUsers (users);
   <h3>github users</h3>
   <ul className='users'>
     {users.map((user) => {
-      const {id, login, avatar_url, html_url} = user
-      return <li key ={id}>
+      const {id, login, avatar_url, html_url} = user;
+      return ( 
+      <li key ={id}>
         <img src={'avatar_url'} alt={login}></img>
         <div>
-          <h4></h4>
+          <h4>{login}</h4>
+          <a href={html_url}>profile</a>
         </div>
 
       </li>
+      );
 })}
 
   </ul>
